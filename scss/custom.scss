@@ -330,13 +330,10 @@ $colors: (
 
 
 //Custom Color Scheme
-$primary-light:		$blue-300;
-$primary:       	$blue-500;
-$primary-dark:		$blue-700;
-$secondary:     	$teal-A700;
-
-//$secondary-light:	$green-50;
-
+$primary-light:		$green-300;
+$primary:       	$green-500;
+$primary-dark:		$green-700;
+$secondary:     	$lime-A700;
 
 
 //Add Primary Dark and Primary Light themes
@@ -344,7 +341,6 @@ $theme-colors: (
   "primary-dark": 		$primary-dark,
   "primary-light": 		$primary-light,	 
 );
-
 //End-Colors
 
 
@@ -397,7 +393,6 @@ $custom-control-indicator-focus-box-shadow: 	0 0 0px 8px rgba($secondary,.1); 	/
 //Navs
 
 $navbar-nav-link-padding-x: 24px;
-//$nav-link-height:			48px;
 $navbar-brand-padding-y: 	8px;
 $navbar-dark-color:			rgba($white,.7);
 $navbar-dark-hover-color:	$white;
@@ -415,6 +410,8 @@ $tooltip-arrow-height:	0;
 .navbar {box-shadow: $shadow-4}
 .card {box-shadow: $shadow-2}
 
+
+
 .nav-item:hover{
 	border-bottom: 2px solid $secondary;
 }
@@ -430,6 +427,9 @@ $tooltip-arrow-height:	0;
 
 
 @import "../bootstrap/scss/bootstrap";
+
+
+
 
 //Responsive Typography
 	
