@@ -1,3 +1,6 @@
+//Custom Variables
+
+//Colors
 $white:    		#fff ;
 $gray-50:		#FAFAFA;
 $gray-100:		#F5F5F5;
@@ -330,10 +333,10 @@ $colors: (
 
 
 //Custom Color Scheme
-$primary-light:		$green-300;
-$primary:       	$green-500;
-$primary-dark:		$green-700;
-$secondary:     	$lime-A700;
+$primary-light:		$blue-300;
+$primary:       	$blue-500;
+$primary-dark:		$blue-700;
+$secondary:     	$teal-A700;
 
 
 //Add Primary Dark and Primary Light themes
@@ -341,26 +344,18 @@ $theme-colors: (
   "primary-dark": 		$primary-dark,
   "primary-light": 		$primary-light,	 
 );
-//End-Colors
 
 
+// -- Shadows --
 $enable-shadows: true ;
-$enable-gradients: true;
 
-$link-hover-color: $primary-dark;
-$font-family-sans-serif:	"Roboto", "Helvetica", "Arial", sans-serif;
-
-$enable-rounded:	true;
-$border-radius:		2px;
-$border-radius-lg:	2px; 
-$border-radius-sm:	2px; 
-
-
-//tables
-$table-hover-bg:   	$gray-200;
-$table-head-bg:  	$white;//transparent;
-$table-head-color:	rgba($black,.54);
-
+//https://material.io/design/environment/elevation.html
+//Nav drawer: 16dp
+//App bar: 4dp
+//Card: 1dp to 8dp
+//FAB: 6dp
+//Button: 2dp to 8dp
+//Dialog: 24dp
 
 //Shadows from Material Design Lite
 $shadow-2: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); 
@@ -369,54 +364,262 @@ $shadow-4: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 
 $shadow-6: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2); 
 $shadow-8: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2); 
 $shadow-16: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); 
-$shadow-24: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2); 
+$shadow-24: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
 
 
-//Buttons
-$btn-border-width: 			0;
-$btn-box-shadow: 			$shadow-2;
-$btn-focus-width:			0px;		
-$btn-padding-x: 			16px;
+
+
+// -- Components --
+//
+// Define common padding and border radius sizes and more.
+
+//$line-height-lg:              1.5 !default;
+//$line-height-sm:              1.5 !default;
+
+//$border-width:                1px !default;
+//$border-color:                $gray-300 !default;
+
+//Shape
+//https://material.io/design/shape/about-shape.html#shaping-material
+$border-radius:               4px;			//.25rem !default;
+$border-radius-lg:            4px;			//.3rem !default;
+$border-radius-sm:            4px;			//.2rem !default;
+
+$box-shadow-sm:               $shadow-2;		//0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow:                  $shadow-6; 		//0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-lg:               $shadow-24; 		//0 1rem 3rem rgba($black, .175) !default;
+
+//$component-active-color:      $white !default;
+//$component-active-bg:         theme-color("primary") !default;
+
+//$caret-width:                 .3em !default;
+
+//$transition-base:             all .2s ease-in-out !default;
+//$transition-fade:             opacity .15s linear !default;
+//$transition-collapse:         height .35s ease !default;
+
+
+
+
+// -- Typography --
+
+//https://material.io/design/typography/the-type-system.html#type-scale
+$font-size-conversion-ratio: .0625rem; //custom variable
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+//$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:	"Roboto", "Helvetica", "Arial", sans-serif;
+//$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+//$font-family-base:            $font-family-sans-serif !default;
+// stylelint-enable value-keyword-case
+
+//$font-size-base:              1rem; !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-conversion-ratio * 20;			//($font-size-base * 1.25) !default;
+$font-size-sm:                $font-size-conversion-ratio * 14;			//($font-size-base * .875) !default;
+
+$font-weight-light:           300;
+$font-weight-normal:          400; //equivalent to 'Regular' in material design
+$font-weight-medium:          500; // custom variable
+$font-weight-bold:            700;
+
+//$font-weight-base:            $font-weight-normal !default;
+//$line-height-base:            1.5 !default;
+
+$h1-font-size:                $font-size-conversion-ratio * 96; //$font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-conversion-ratio * 60; //$font-size-base * 2 !default;
+$h3-font-size:                $font-size-conversion-ratio * 48; //$font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-conversion-ratio * 34; //$font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-conversion-ratio * 24; //$font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-conversion-ratio * 20; //$font-size-base !default;
+
+//$headings-margin-bottom:      ($spacer / 2) !default;
+// $headings-font-family:        inherit !default;
+// $headings-font-weight:        500 !default;
+// $headings-line-height:        1.2 !default;
+// $headings-color:              inherit !default;
+// 
+$display1-size:               $h1-font-size;			//6rem !default;
+$display2-size:               $h2-font-size;			//5.5rem !default;
+$display3-size:               $h3-font-size;			//4.5rem !default;
+$display4-size:               $h4-font-size;			//3.5rem !default;
+// 
+$display1-weight:             $font-weight-light;			//300 !default;
+$display2-weight:             $font-weight-light;			//300 !default;
+$display3-weight:             $font-weight-normal;			//300 !default;
+$display4-weight:             $font-weight-normal;			//300 !default;
+//$display-line-height:         $headings-line-height !default;
+// 
+// $lead-font-size:              ($font-size-base * 1.25) !default;
+// $lead-font-weight:            300 !default;
+// 
+// $small-font-size:             80% !default;
+// 
+// $text-muted:                  $gray-600 !default;
+// 
+// $blockquote-small-color:      $gray-600 !default;
+// $blockquote-font-size:        ($font-size-base * 1.25) !default;
+
+
+//https://material.io/design/components/dividers.html#specs
+$hr-border-color:             rgba($black, .12);
+// $hr-border-width:             $border-width !default;
+
+// $mark-padding:                .2em !default;
+// 
+// $dt-font-weight:              $font-weight-bold !default;
+// 
+// $kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25) !default;
+// $nested-kbd-font-weight:      $font-weight-bold !default;
+// 
+// $list-inline-padding:         .5rem !default;
+// 
+// $mark-bg:                     #fcf8e3 !default;
+// 
+// $hr-margin-y:                 $spacer !default;
+
+
+
+// Tables
+// https://material.io/design/components/data-tables.html#specs
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+//$table-cell-padding:          .75rem !default;
+//$table-cell-padding-sm:       .3rem !default;
+
+//$table-bg:                    transparent !default;
+//$table-accent-bg:             rgba($black, .05) !default;
+//$table-hover-bg:              rgba($black, .075) !default;
+//$table-active-bg:             $table-hover-bg !default;
+
+//$table-border-width:          $border-width !default;
+//$table-border-color:          $gray-300 !default;
+
+$table-head-bg:               $white;			//$gray-200 !default;
+$table-head-color:            rgba($black, .6);			//$gray-700 !default;
+
+//$table-dark-bg:               $gray-900 !default;
+//$table-dark-accent-bg:        rgba($white, .05) !default;
+//$table-dark-hover-bg:         rgba($white, .075) !default;
+//$table-dark-border-color:     lighten($gray-900, 7.5%) !default;
+//$table-dark-color:            $body-bg !default;
+
+//$table-striped-order:         odd !default;
+
+//$table-caption-color:         $text-muted !default;
+
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+//$input-btn-padding-y:         .375rem !default;
+//$input-btn-padding-x:         .75rem !default;
+//$input-btn-line-height:       $line-height-base !default;
+
+//$input-btn-focus-width:       .2rem !default;
+//$input-btn-focus-color:       rgba($component-active-bg, .25) !default;
+//$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+//$input-btn-padding-y-sm:      .25rem !default;
+//$input-btn-padding-x-sm:      .5rem !default;
+//$input-btn-line-height-sm:    $line-height-sm !default;
+
+//$input-btn-padding-y-lg:      .5rem !default;
+//$input-btn-padding-x-lg:      1rem !default;
+//$input-btn-line-height-lg:    $line-height-lg !default;
+
+//$input-btn-border-width:      $border-width !default;
+
+
+// Buttons
+
+// https://material.io/design/components/buttons.html#specs
+
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+//$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-x:               16px;			//$input-btn-padding-x !default;
+//$btn-line-height:             $input-btn-line-height !default;
+
+//$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-x-sm:            16px;			//$input-btn-padding-x-sm !default;
+//$btn-line-height-sm:          $input-btn-line-height-sm !default;
+
+//$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-x-lg:            16px;			//$input-btn-padding-x-lg !default;
+//$btn-line-height-lg:          $input-btn-line-height-lg !default;
+
+//$btn-border-width:            $input-btn-border-width !default;
+
+$btn-font-weight:             $font-weight-medium;			//$font-weight-normal !default;
+$btn-box-shadow:              $shadow-2;			//inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+$btn-focus-width:             0px;			//$input-btn-focus-width !default;
+//$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+
+//https://material.io/design/interaction/states.html#disabled
+$btn-disabled-opacity:        .38;			//.65 !default;
+$btn-active-box-shadow:       $shadow-6;	//inset 0 3px 5px rgba($black, .125) !default;
+
+//$btn-link-disabled-color:     $gray-600 !default;
+
+//$btn-block-spacing-y:         .5rem !default;
+
+// Allows for customizing button radius independently from global border radius
+//$btn-border-radius:           $border-radius !default;
+//$btn-border-radius-lg:        $border-radius-lg !default;
+//$btn-border-radius-sm:        $border-radius-sm !default;
+
+//$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 
 //forms
 
-$input-focus-border-color: $primary-light;
-
+$input-focus-border-color: 						$primary;
 $custom-control-indicator-checked-bg: 			$secondary; 	//outer circle of radio
 $custom-control-indicator-active-bg: 			$secondary; 	//radio on click
 $custom-control-indicator-box-shadow: 			none; 		//shadow within the button
 $custom-control-indicator-focus-box-shadow: 	0 0 0px 8px rgba($secondary,.1); 	//outer focus ring
 
-//$form-feedback-valid-color: none;
+// Navbar
+// https://material.io/design/components/app-bars-top.html#specs
+$navbar-padding-y:            	16px; //($spacer / 2) !default;
+$navbar-padding-x:            	16px; //$spacer !default;
 
-//Navs
+$navbar-nav-link-padding-x:		24px;
 
-$navbar-nav-link-padding-x: 24px;
-$navbar-brand-padding-y: 	8px;
-$navbar-dark-color:			rgba($white,.7);
-$navbar-dark-hover-color:	$white;
-
-
-//Tooltips
-$tooltip-bg:			$gray-700;
-$tooltip-opacity: 		.9;
-$tooltip-arrow-width:	0;    
-$tooltip-arrow-height:	0;
-
-
-//Add shadows to components
-.jumbotron {box-shadow: $shadow-2;}
-.navbar {box-shadow: $shadow-4}
-.card {box-shadow: $shadow-2}
+$navbar-dark-color:				rgba($white,.7);
+$navbar-dark-hover-color:		$white;
 
 
 
-.nav-item:hover{
-	border-bottom: 2px solid $secondary;
-}
+// Tooltips
+//https://material.io/design/components/tooltips.html#spec
+
+//$tooltip-font-size:                 $font-size-sm !default;
+//$tooltip-max-width:                 200px !default;
+//$tooltip-color:                     $white !default;
+$tooltip-bg:                        $gray-700; 			//$black !default;
+//$tooltip-border-radius:             $border-radius !default;
+$tooltip-opacity:                   .9;
+//$tooltip-padding-y:                 .25rem !default;
+$tooltip-padding-x:                 8px;			//.5rem !default;
+//$tooltip-margin:                    0 !default;
+
+$tooltip-arrow-width:               0px;			//.8rem !default;
+$tooltip-arrow-height:              0px;			//.4rem !default;
+//$tooltip-arrow-color:               $tooltip-bg !default;
+
+@import "../bootstrap/scss/bootstrap";
 
 
+// -- Post import stuff --
 
 //custom select was missing this
 .custom-select {
@@ -424,15 +627,65 @@ $tooltip-arrow-height:	0;
 	-moz-appearance: none;
 }
 
+//Typography
+//change font-weight and letter-spacing
+//Letter spacing
+// NOT originally from bootstrap
+
+$h1-letter-spacing:			-1.5px;
+$h2-letter-spacing:			-0.5px; 	
+$h3-letter-spacing:			0px; 		
+$h4-letter-spacing:			.25px;	
+$h5-letter-spacing:			0px;		
+$h6-letter-spacing:			.15px;	
+$subtitle-letter-spacing:	.15px;
+$body-letter-spacing:		.5px;
+$button-letter-spacing:		.75px;
+
+body,p {
+	letter-spacing: $body-letter-spacing;
+	font-weight: $font-weight-medium;
+}
+
+.card-subtitle {	
+	letter-spacing:	$subtitle-letter-spacing;
+
+}
+
+h1,.h1,.display-1 {
+	font-weight: 	$font-weight-light;
+	letter-spacing: $h1-letter-spacing;
+}
+
+h2,.h2,.display-2 {
+	font-weight: 	$font-weight-light;
+	letter-spacing: $h2-letter-spacing;
+}
+
+h3,.h3,.display-3 {
+	font-weight: 	$font-weight-normal;
+	letter-spacing: $h3-letter-spacing;
+}
+
+h4,.h4,.display-4 {
+	font-weight: 	$font-weight-normal;
+	letter-spacing: $h4-letter-spacing;
+}
+
+h5,h5 {
+	font-weight: 	$font-weight-normal;
+	letter-spacing: $h5-letter-spacing;
+}
 
 
-@import "../bootstrap/scss/bootstrap";
-
-
+h6,.h6 {
+	font-weight: 	$font-weight-medium;
+	letter-spacing: $h6-letter-spacing;
+}
 
 
 //Responsive Typography
-	
+
 @include media-breakpoint-up(xs) {
 	// 1/2
 	.display-1 { font-size:	$display1-size * .5;}
@@ -475,6 +728,126 @@ $tooltip-arrow-height:	0;
 	.display-3 { font-size: $display3-size;}
 	.display-4 { font-size: $display4-size;}
 }
+
+
+
+//Shadows
+//Add shadows to components
+.jumbotron {box-shadow: $shadow-2;}
+.navbar {box-shadow: 	$shadow-4}
+.card {box-shadow: 		$shadow-2}
+
+
+
+
+//Buttons
+.btn {
+	text-transform: 	uppercase;
+	font-size: 			$font-size-conversion-ratio * 14;
+	letter-spacing: 	$button-letter-spacing;	
+	font-weight:		$font-weight-medium;
+	
+}
+
+//https://material.io/design/interaction/states.html#anatomy
+$btn-outline-border-color:	rgba($black,.12);
+
+//double the outline opacity and then subtract it from 1
+$btn-hover-opacity:		.92;
+$btn-focus-opacity:		.76;
+$btn-pressed-opacity: 	.68;
+
+$btn-outline-hover-opacity:		.04;
+$btn-outline-focus-opacity:		.12;
+$btn-outline-pressed-opacity: 	.16;
+
+
+//changes to contained buttons
+//https://material.io/design/components/buttons.html#contained-button
+
+@each $color, $value in $theme-colors {
+	.btn-#{$color} {
+	
+		&:not(:disabled):not(.disabled):hover {
+    		background-color: 	rgba($value, $btn-hover-opacity);
+    		border-color: 		rgba($value, $btn-hover-opacity);
+  		}
+  		
+  		&:not(:disabled):not(.disabled):focus,
+  		&:not(:disabled):not(.disabled).focus {
+    		background-color: 	rgba($value, $btn-focus-opacity);
+    		border-color: 		rgba($value, $btn-focus-opacity);
+  		}
+  		
+  		&:not(:disabled):not(.disabled):active,
+  		&:not(:disabled):not(.disabled).active {
+  			background:			radial-gradient(circle, rgba($value,$btn-pressed-opacity) 70% ,rgba($value,1) 30%);
+    		background-color: 	rgba($value, $btn-pressed-opacity);
+    		border-color: 		rgba($value, $btn-pressed-opacity);
+    		box-shadow:			none;
+  		}
+  	
+  		&:disabled,
+  		&.disabled {
+    		background-color: 	rgba($black,$btn-disabled-opacity);
+    		border-color: 		rgba($black,$btn-disabled-opacity);
+    		color:				rgba($black,1-$btn-disabled-opacity);
+    		box-shadow:			none;
+  		}
+	}
+}
+
+
+//Changes to the outline buttons
+//https://material.io/design/components/buttons.html#outlined-button
+
+@each $color, $value in $theme-colors {
+	.btn-outline-#{$color} {
+    	border-color: $btn-outline-border-color;
+    
+    
+		&:not(:disabled):not(.disabled):hover {
+    		background-color: 	rgba($value, $btn-outline-hover-opacity);
+    		border-color: 		$btn-outline-border-color;
+    		color:				$value;
+  		}
+    
+    	&:not(:disabled):not(.disabled):focus,
+  		&:not(:disabled):not(.disabled).focus {
+    		background-color: 	rgba($value,$btn-outline-focus-opacity);
+    		border-color: 		$btn-outline-border-color;
+  		}
+  	
+  		&:not(:disabled):not(.disabled):active,
+  		&:not(:disabled):not(.disabled).active {
+  			background:		radial-gradient(circle, rgba($value,$btn-outline-pressed-opacity) 70% ,transparent 30%);
+    		background-color: 	rgba($value, $btn-outline-pressed-opacity);
+    		border-color: 		$btn-outline-border-color;
+    	
+    		&:focus {
+    			box-shadow:	none;
+    		}
+  		}
+  	
+  		&:disabled,
+  		&.disabled {
+    		border-color: 		$btn-outline-border-color;
+    		color:				rgba($black,1-$btn-disabled-opacity);
+  		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
