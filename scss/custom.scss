@@ -328,21 +328,21 @@ $colors: (
   	"deep-orange":	$deep-orange-500,
   	"brown":		$brown-500,
   	"blue-gray":	$blue-gray-500
-  
+
 );
 
 
 //Custom Color Scheme
-$primary-light:		$blue-300;
-$primary:       	$blue-500;
-$primary-dark:		$blue-700;
-$secondary:     	$teal-A700;
+$primary-light:		$cyan-400;
+$primary:       	$cyan-600;
+$primary-dark:		$cyan-800;
+$secondary:     	$green-A700;
 
 
 //Add Primary Dark and Primary Light themes
 $theme-colors: (
   "primary-dark": 		$primary-dark,
-  "primary-light": 		$primary-light,	 
+  "primary-light": 		$primary-light,
 );
 
 
@@ -358,12 +358,12 @@ $enable-shadows: true ;
 //Dialog: 24dp
 
 //Shadows from Material Design Lite
-$shadow-2: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); 
-$shadow-3: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12); 
-$shadow-4: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); 
-$shadow-6: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2); 
-$shadow-8: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2); 
-$shadow-16: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); 
+$shadow-2: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+$shadow-3: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+$shadow-4: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+$shadow-6: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+$shadow-8: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+$shadow-16: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 $shadow-24: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
 
 
@@ -427,10 +427,10 @@ $font-weight-normal:          400; //equivalent to 'Regular' in material design
 $font-weight-medium:          500; // custom variable
 $font-weight-bold:            700;
 
-//$font-weight-base:            $font-weight-normal !default;
-//$line-height-base:            1.5 !default;
+$font-weight-base:            $font-weight-normal; //!default;
+$line-height-base:            1.5; 			//!default;
 
-$h1-font-size:                $font-size-conversion-ratio * 96; //$font-size-base * 2.5 !default;
+$h1-font-size:                96px; //$font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-conversion-ratio * 60; //$font-size-base * 2 !default;
 $h3-font-size:                $font-size-conversion-ratio * 48; //$font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-conversion-ratio * 34; //$font-size-base * 1.5 !default;
@@ -442,25 +442,25 @@ $h6-font-size:                $font-size-conversion-ratio * 20; //$font-size-bas
 // $headings-font-weight:        500 !default;
 // $headings-line-height:        1.2 !default;
 // $headings-color:              inherit !default;
-// 
+//
 $display1-size:               $h1-font-size;			//6rem !default;
 $display2-size:               $h2-font-size;			//5.5rem !default;
 $display3-size:               $h3-font-size;			//4.5rem !default;
 $display4-size:               $h4-font-size;			//3.5rem !default;
-// 
+//
 $display1-weight:             $font-weight-light;			//300 !default;
 $display2-weight:             $font-weight-light;			//300 !default;
 $display3-weight:             $font-weight-normal;			//300 !default;
 $display4-weight:             $font-weight-normal;			//300 !default;
 //$display-line-height:         $headings-line-height !default;
-// 
+//
 // $lead-font-size:              ($font-size-base * 1.25) !default;
 // $lead-font-weight:            300 !default;
-// 
+//
 // $small-font-size:             80% !default;
-// 
+//
 // $text-muted:                  $gray-600 !default;
-// 
+//
 // $blockquote-small-color:      $gray-600 !default;
 // $blockquote-font-size:        ($font-size-base * 1.25) !default;
 
@@ -470,16 +470,16 @@ $hr-border-color:             rgba($black, .12);
 // $hr-border-width:             $border-width !default;
 
 // $mark-padding:                .2em !default;
-// 
+//
 // $dt-font-weight:              $font-weight-bold !default;
-// 
+//
 // $kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25) !default;
 // $nested-kbd-font-weight:      $font-weight-bold !default;
-// 
+//
 // $list-inline-padding:         .5rem !default;
-// 
+//
 // $mark-bg:                     #fcf8e3 !default;
-// 
+//
 // $hr-margin-y:                 $spacer !default;
 
 
@@ -540,32 +540,36 @@ $table-head-color:            rgba($black, .6);			//$gray-700 !default;
 // Buttons
 
 // https://material.io/design/components/buttons.html#specs
+// https://material.io/design/typography/understanding-typography.html#readability
+
+//button height is 36 and the line height for 14px font-size is 20px
+//so I made the padding-y to be 8px; 8 + 8 + 20 = 36
 
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-//$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-y:               8px;			//$input-btn-padding-y !default;
 $btn-padding-x:               16px;			//$input-btn-padding-x !default;
-//$btn-line-height:             $input-btn-line-height !default;
+$btn-line-height:             20px;			//$input-btn-line-height !default;
 
-//$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-y-sm:            8px;			//$input-btn-padding-y-sm !default;
 $btn-padding-x-sm:            16px;			//$input-btn-padding-x-sm !default;
-//$btn-line-height-sm:          $input-btn-line-height-sm !default;
+$btn-line-height-sm:          20px;			//$input-btn-line-height-sm !default;
 
-//$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-y-lg:            8px;			//$input-btn-padding-y-lg !default;
 $btn-padding-x-lg:            16px;			//$input-btn-padding-x-lg !default;
-//$btn-line-height-lg:          $input-btn-line-height-lg !default;
+$btn-line-height-lg:          20px;			//$input-btn-line-height-lg !default;
 
-//$btn-border-width:            $input-btn-border-width !default;
+$btn-border-width:            0px;			//$input-btn-border-width !default;
 
 $btn-font-weight:             $font-weight-medium;			//$font-weight-normal !default;
 $btn-box-shadow:              $shadow-2;			//inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
-$btn-focus-width:             0px;			//$input-btn-focus-width !default;
-//$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+$btn-focus-width:             0px;						//$input-btn-focus-width !default;
+$btn-focus-box-shadow:        $shadow-3;			//$input-btn-focus-box-shadow !default;
 
 //https://material.io/design/interaction/states.html#disabled
 $btn-disabled-opacity:        .38;			//.65 !default;
-$btn-active-box-shadow:       $shadow-6;	//inset 0 3px 5px rgba($black, .125) !default;
+$btn-active-box-shadow:       $shadow-8;	//inset 0 3px 5px rgba($black, .125) !default;
 
 //$btn-link-disabled-color:     $gray-600 !default;
 
@@ -581,11 +585,12 @@ $btn-active-box-shadow:       $shadow-6;	//inset 0 3px 5px rgba($black, .125) !d
 
 //forms
 
-$input-focus-border-color: 						$primary;
-$custom-control-indicator-checked-bg: 			$secondary; 	//outer circle of radio
+$input-focus-border-color: 								$primary;
+$custom-control-indicator-checked-bg:			$secondary; 	//outer circle of radio
 $custom-control-indicator-active-bg: 			$secondary; 	//radio on click
-$custom-control-indicator-box-shadow: 			none; 		//shadow within the button
+$custom-control-indicator-box-shadow: 		none; 		//shadow within the button
 $custom-control-indicator-focus-box-shadow: 	0 0 0px 8px rgba($secondary,.1); 	//outer focus ring
+
 
 // Navbar
 // https://material.io/design/components/app-bars-top.html#specs
@@ -594,7 +599,7 @@ $navbar-padding-x:            	16px; //$spacer !default;
 
 $navbar-nav-link-padding-x:		24px;
 
-$navbar-dark-color:				rgba($white,.7);
+$navbar-dark-color:					rgba($white,.7);
 $navbar-dark-hover-color:		$white;
 
 
@@ -616,10 +621,19 @@ $tooltip-arrow-width:               0px;			//.8rem !default;
 $tooltip-arrow-height:              0px;			//.4rem !default;
 //$tooltip-arrow-color:               $tooltip-bg !default;
 
+
+
+
 @import "../bootstrap/scss/bootstrap";
 
 
+
+
+
 // -- Post import stuff --
+
+
+
 
 //custom select was missing this
 .custom-select {
@@ -633,58 +647,54 @@ $tooltip-arrow-height:              0px;			//.4rem !default;
 // NOT originally from bootstrap
 
 $h1-letter-spacing:			-1.5px;
-$h2-letter-spacing:			-0.5px; 	
-$h3-letter-spacing:			0px; 		
-$h4-letter-spacing:			.25px;	
-$h5-letter-spacing:			0px;		
-$h6-letter-spacing:			.15px;	
-$subtitle-letter-spacing:	.15px;
+$h2-letter-spacing:			-0.5px;
+$h3-letter-spacing:			0px;
+$h4-letter-spacing:			.25px;
+$h5-letter-spacing:			0px;
+$h6-letter-spacing:			.15px;
+
 $body-letter-spacing:		.5px;
 $button-letter-spacing:		.75px;
 
 body,p {
+	font-weight: 		$font-weight-medium;
 	letter-spacing: $body-letter-spacing;
-	font-weight: $font-weight-medium;
-}
-
-.card-subtitle {	
-	letter-spacing:	$subtitle-letter-spacing;
-
 }
 
 h1,.h1,.display-1 {
-	font-weight: 	$font-weight-light;
+	font-weight: 		$font-weight-light;
 	letter-spacing: $h1-letter-spacing;
 }
 
 h2,.h2,.display-2 {
-	font-weight: 	$font-weight-light;
+	font-weight: 		$font-weight-light;
 	letter-spacing: $h2-letter-spacing;
 }
 
 h3,.h3,.display-3 {
-	font-weight: 	$font-weight-normal;
+	font-weight: 		$font-weight-normal;
 	letter-spacing: $h3-letter-spacing;
 }
 
 h4,.h4,.display-4 {
-	font-weight: 	$font-weight-normal;
+	font-weight: 		$font-weight-normal;
 	letter-spacing: $h4-letter-spacing;
 }
 
 h5,h5 {
-	font-weight: 	$font-weight-normal;
+	font-weight: 		$font-weight-normal;
 	letter-spacing: $h5-letter-spacing;
 }
 
 
 h6,.h6 {
-	font-weight: 	$font-weight-medium;
+	font-weight: 		$font-weight-medium;
 	letter-spacing: $h6-letter-spacing;
 }
 
 
 //Responsive Typography
+
 
 @include media-breakpoint-up(xs) {
 	// 1/2
@@ -692,7 +702,7 @@ h6,.h6 {
 	.display-2 { font-size: $display2-size * .5;}
 	.display-3 { font-size: $display3-size * .5;}
 	.display-4 { font-size: $display4-size * .5;}
-	
+
 }
 
 @include media-breakpoint-up(sm) {
@@ -701,7 +711,7 @@ h6,.h6 {
 	.display-2 { font-size: $display2-size * .625;}
 	.display-3 { font-size: $display3-size * .625;}
 	.display-4 { font-size: $display4-size * .625;}
-	
+
 }
 
 @include media-breakpoint-up(md) {
@@ -710,7 +720,7 @@ h6,.h6 {
 	.display-2 { font-size: $display2-size * .75;}
 	.display-3 { font-size: $display3-size * .75;}
 	.display-4 { font-size: $display4-size * .75;}
-	
+
 }
 
 @include media-breakpoint-up(lg) {
@@ -722,7 +732,6 @@ h6,.h6 {
 }
 
 @include media-breakpoint-up(xl) {
-	
 	.display-1 { font-size:	$display1-size;}
 	.display-2 { font-size: $display2-size;}
 	.display-3 { font-size: $display3-size;}
@@ -738,28 +747,27 @@ h6,.h6 {
 .card {box-shadow: 		$shadow-2}
 
 
-
-
 //Buttons
+
 .btn {
 	text-transform: 	uppercase;
-	font-size: 			$font-size-conversion-ratio * 14;
-	letter-spacing: 	$button-letter-spacing;	
-	font-weight:		$font-weight-medium;
-	
+	font-size: 				$font-size-conversion-ratio * 14;
+	letter-spacing: 	$button-letter-spacing;
+	font-weight:			$font-weight-medium;
 }
 
 //https://material.io/design/interaction/states.html#anatomy
 $btn-outline-border-color:	rgba($black,.12);
 
-//double the outline opacity and then subtract it from 1
-$btn-hover-opacity:		.92;
-$btn-focus-opacity:		.76;
-$btn-pressed-opacity: 	.68;
-
+//the outline button opacities can be doubled
 $btn-outline-hover-opacity:		.04;
 $btn-outline-focus-opacity:		.12;
-$btn-outline-pressed-opacity: 	.16;
+$btn-outline-pressed-opacity:	.16;
+
+// 1 - outline opacity
+$btn-hover-opacity:		.96;
+$btn-focus-opacity:		.88;
+$btn-pressed-opacity:	.84;
 
 
 //changes to contained buttons
@@ -767,33 +775,34 @@ $btn-outline-pressed-opacity: 	.16;
 
 @each $color, $value in $theme-colors {
 	.btn-#{$color} {
-	
+
 		&:not(:disabled):not(.disabled):hover {
     		background-color: 	rgba($value, $btn-hover-opacity);
-    		border-color: 		rgba($value, $btn-hover-opacity);
-  		}
-  		
-  		&:not(:disabled):not(.disabled):focus,
-  		&:not(:disabled):not(.disabled).focus {
-    		background-color: 	rgba($value, $btn-focus-opacity);
-    		border-color: 		rgba($value, $btn-focus-opacity);
-  		}
-  		
-  		&:not(:disabled):not(.disabled):active,
-  		&:not(:disabled):not(.disabled).active {
-  			background:			radial-gradient(circle, rgba($value,$btn-pressed-opacity) 70% ,rgba($value,1) 30%);
-    		background-color: 	rgba($value, $btn-pressed-opacity);
-    		border-color: 		rgba($value, $btn-pressed-opacity);
-    		box-shadow:			none;
-  		}
-  	
-  		&:disabled,
-  		&.disabled {
-    		background-color: 	rgba($black,$btn-disabled-opacity);
-    		border-color: 		rgba($black,$btn-disabled-opacity);
-    		color:				rgba($black,1-$btn-disabled-opacity);
-    		box-shadow:			none;
-  		}
+    		//border-color: 			rgba($value, $btn-hover-opacity);
+		}
+
+		&:not(:disabled):not(.disabled):focus,
+		&:not(:disabled):not(.disabled).focus {
+  		background-color: 	rgba($value, $btn-focus-opacity);
+			//https://material.io/design/interaction/states.html#focus
+			//Some components, such as button, chips or cards, can inherit (1) elevation to signify a focus state
+			box-shadow: 				$shadow-3;
+  		//border-color: 		rgba($value, $btn-focus-opacity);
+		}
+
+		&:not(:disabled):not(.disabled):active,
+		&:not(:disabled):not(.disabled).active {
+  		background-color: 	rgba($value, $btn-pressed-opacity);
+  		//border-color: 		rgba($value, $btn-pressed-opacity);
+		}
+
+		&:disabled,
+		&.disabled {
+  		background-color:	$btn-outline-border-color;
+    	color:						rgba($black,$btn-disabled-opacity);
+			opacity: 					100;
+  		box-shadow:				none;
+		}
 	}
 }
 
@@ -803,53 +812,39 @@ $btn-outline-pressed-opacity: 	.16;
 
 @each $color, $value in $theme-colors {
 	.btn-outline-#{$color} {
-    	border-color: $btn-outline-border-color;
-    
-    
+		border: 1px solid transparent;
+		border-color: $btn-outline-border-color;
+
+
 		&:not(:disabled):not(.disabled):hover {
-    		background-color: 	rgba($value, $btn-outline-hover-opacity);
+    		background-color:	rgba($value, $btn-outline-hover-opacity);
     		border-color: 		$btn-outline-border-color;
-    		color:				$value;
+    		color:						$value;
+  	}
+
+  	&:not(:disabled):not(.disabled):focus,
+		&:not(:disabled):not(.disabled).focus {
+  		background-color: 	rgba($value,$btn-outline-focus-opacity);
+  		border-color: 		$btn-outline-border-color;
+
+		}
+
+		&:not(:disabled):not(.disabled):active,
+		&:not(:disabled):not(.disabled).active {
+  		background-color: 	rgba($value, $btn-outline-pressed-opacity);
+  		border-color: 		$btn-outline-border-color;
+			box-shadow: 			none;
+
+  		&:focus {
+  			box-shadow:	none;
   		}
-    
-    	&:not(:disabled):not(.disabled):focus,
-  		&:not(:disabled):not(.disabled).focus {
-    		background-color: 	rgba($value,$btn-outline-focus-opacity);
-    		border-color: 		$btn-outline-border-color;
-  		}
-  	
-  		&:not(:disabled):not(.disabled):active,
-  		&:not(:disabled):not(.disabled).active {
-  			background:		radial-gradient(circle, rgba($value,$btn-outline-pressed-opacity) 70% ,transparent 30%);
-    		background-color: 	rgba($value, $btn-outline-pressed-opacity);
-    		border-color: 		$btn-outline-border-color;
-    	
-    		&:focus {
-    			box-shadow:	none;
-    		}
-  		}
-  	
-  		&:disabled,
-  		&.disabled {
-    		border-color: 		$btn-outline-border-color;
-    		color:				rgba($black,1-$btn-disabled-opacity);
-  		}
+		}
+
+		&:disabled,
+		&.disabled {
+  		border-color: 		$btn-outline-border-color;
+  		color:				rgba($black,$btn-disabled-opacity);
+			opacity:			100;
+		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
