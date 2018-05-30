@@ -314,10 +314,10 @@ $purple : $purple-500;
 $pink : $pink-500;
 $red : $red-500;
 $orange : $orange-500;
-$yellow : $yellow-500;
+$yellow : $yellow-700;
 $green : $green-500;
 $teal : $teal-500;
-$cyan : $cyan-500;
+$cyan : $cyan-700;
 
 $colors: (
 	"deep-purple":	$deep-purple-500,
@@ -347,6 +347,9 @@ $theme-colors: (
 
 
 // -- Shadows --
+// Shadows provide cues about depth, direction of movement, and surface edges.
+// A surface’s shadow is determined by its elevation and relationship to other
+// surfaces.
 $enable-shadows: true ;
 
 //https://material.io/design/environment/elevation.html
@@ -367,6 +370,25 @@ $shadow-16: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.
 $shadow-24: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
 
 
+// -- State --
+//https://material.io/design/interaction/states.html#anatomy
+
+// States are visual representations used to communicate the status of a
+// component or interactive element.
+
+//custom variables
+//these values can be doubled
+$hover-opacity-light:			.04;
+$focus-opacity-light:			.12;
+$active-opacity-light: 	.16;
+
+$hover-opacity-dark:		1 - ($hover-opacity-light * 2);
+$focus-opacity-dark:		1 - ($focus-opacity-light * 2);
+$active-opacity-dark: 	1 - ($active-opacity-light * 2);
+
+$disabled-opacity:	.38;
+
+// -- End States --
 
 
 // -- Components --
@@ -419,8 +441,8 @@ $font-family-sans-serif:	"Roboto", "Helvetica", "Arial", sans-serif;
 // stylelint-enable value-keyword-case
 
 //$font-size-base:              1rem; !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                $font-size-conversion-ratio * 20;			//($font-size-base * 1.25) !default;
-$font-size-sm:                $font-size-conversion-ratio * 14;			//($font-size-base * .875) !default;
+//$font-size-lg:                ($font-size-base * 1.25) !default;
+//$font-size-sm:                ($font-size-base * .875) !default;
 
 $font-weight-light:           300;
 $font-weight-normal:          400; //equivalent to 'Regular' in material design
@@ -568,7 +590,7 @@ $btn-focus-width:             0px;						//$input-btn-focus-width !default;
 $btn-focus-box-shadow:        $shadow-3;			//$input-btn-focus-box-shadow !default;
 
 //https://material.io/design/interaction/states.html#disabled
-$btn-disabled-opacity:        .38;			//.65 !default;
+$btn-disabled-opacity:        $disabled-opacity;			//.65 !default;
 $btn-active-box-shadow:       $shadow-8;	//inset 0 3px 5px rgba($black, .125) !default;
 
 //$btn-link-disabled-color:     $gray-600 !default;
@@ -615,7 +637,7 @@ $custom-control-indicator-checked-bg:           $secondary;			//$component-activ
 //$custom-control-indicator-checked-box-shadow:   none !default;
 
 //Shadow when it has focus
-$custom-control-indicator-focus-box-shadow:     0 0 0px 8px rgba($secondary,.24);			//0 0 0 1px $body-bg, $input-btn-focus-box-shadow !default;
+$custom-control-indicator-focus-box-shadow:     0 0 0px 8px rgba($secondary,$focus-opacity-light);			//0 0 0 1px $body-bg, $input-btn-focus-box-shadow !default;
 
 //no idea
 //$custom-control-indicator-active-color:         $component-active-color !default;
@@ -624,7 +646,7 @@ $custom-control-indicator-focus-box-shadow:     0 0 0px 8px rgba($secondary,.24)
 $custom-control-indicator-active-bg:            $secondary;			//lighten($component-active-bg, 35%) !default;
 
 //Shadow when pressing down.
-$custom-control-indicator-active-box-shadow:    0 0 0px 8px rgba($secondary,.32);			//none !default;
+$custom-control-indicator-active-box-shadow:    0 0 0px 8px rgba($secondary,$active-opacity-light);			//none !default;
 
 //border radius
 // $custom-checkbox-indicator-border-radius:       $border-radius !default;
@@ -659,7 +681,7 @@ $custom-select-line-height:         20px;			//$input-btn-line-height !default;
 // $custom-select-border-radius:       $border-radius !default;
 
 $custom-select-focus-border-color:  $primary;			//$input-focus-border-color !default;
-$custom-select-focus-box-shadow:    none;			//inset 0 1px 2px rgba($black, .075), 0 0 5px rgba($custom-select-focus-border-color, .5) !default;
+$custom-select-focus-box-shadow:    none; //inset 0 1px 2px rgba($black, .075), 0 0 5px rgba($custom-select-focus-border-color, .5) !default;
 
 // $custom-select-font-size-sm:        75% !default;
 // $custom-select-height-sm:           $input-height-sm !default;
@@ -672,8 +694,8 @@ $custom-select-focus-box-shadow:    none;			//inset 0 1px 2px rgba($black, .075)
 
 // Navbar
 // https://material.io/design/components/app-bars-top.html#specs
-$navbar-padding-y:            	16px; //($spacer / 2) !default;
-$navbar-padding-x:            	16px; //$spacer !default;
+$navbar-padding-y:       			16px; //($spacer / 2) !default;
+$navbar-padding-x:           	16px; //$spacer !default;
 
 $navbar-nav-link-padding-x:		24px;
 
@@ -718,6 +740,9 @@ $tooltip-arrow-height:              0px;			//.4rem !default;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
+
+
+
 
 //Typography
 //change font-weight and letter-spacing
@@ -821,8 +846,8 @@ h6,.h6 {
 //Shadows
 //Add shadows to components
 .jumbotron {box-shadow: $shadow-2;}
-.navbar {box-shadow: 	$shadow-4}
-.card {box-shadow: 		$shadow-2}
+.navbar {box-shadow: 		$shadow-4}
+.card {box-shadow: 			$shadow-2}
 
 
 //Buttons
@@ -836,17 +861,17 @@ h6,.h6 {
 
 $btn-outline-border-color:	rgba($black,.12);
 
-//https://material.io/design/interaction/states.html#anatomy
+//Button States
 
-//the outline button opacities can be doubled
-$btn-outline-hover-opacity:		.04;
-$btn-outline-focus-opacity:		.12;
-$btn-outline-pressed-opacity:	.16;
+//
+$btn-outline-hover-opacity:		$hover-opacity-light;
+$btn-outline-focus-opacity:		$focus-opacity-light;
+$btn-outline-active-opacity:	$active-opacity-light;
 
 // 1 - outline opacity
-$btn-hover-opacity:		.96;
-$btn-focus-opacity:		.88;
-$btn-pressed-opacity:	.84;
+$btn-hover-opacity:		$hover-opacity-dark;
+$btn-focus-opacity:		$focus-opacity-dark;
+$btn-active-opacity:	$active-opacity-dark;
 
 
 //changes to contained buttons
@@ -869,7 +894,7 @@ $btn-pressed-opacity:	.84;
 
 		&:not(:disabled):not(.disabled):active,
 		&:not(:disabled):not(.disabled).active {
-  		background-color: 	rgba($value, $btn-pressed-opacity);
+  		background-color: 	rgba($value, $btn-active-opacity);
 		}
 
 		&:disabled,
@@ -907,7 +932,7 @@ $btn-pressed-opacity:	.84;
 
 		&:not(:disabled):not(.disabled):active,
 		&:not(:disabled):not(.disabled).active {
-  		background-color: 	rgba($value, $btn-outline-pressed-opacity);
+  		background-color: 	rgba($value, $btn-outline-active-opacity);
   		border-color: 		$btn-outline-border-color;
 			box-shadow: 			none;
 
