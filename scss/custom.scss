@@ -377,9 +377,8 @@ $shadow-24: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0
 // component or interactive element.
 
 //custom variables
-//these values can be doubled
-$hover-opacity-light:			.04;
-$focus-opacity-light:			.12;
+$hover-opacity-light:		.04;
+$focus-opacity-light:		.12;
 $active-opacity-light: 	.16;
 
 $hover-opacity-dark:		1 - ($hover-opacity-light * 2);
@@ -453,7 +452,7 @@ $font-weight-base:            $font-weight-normal; //!default;
 $line-height-base:            1.5; 			//!default;
 
 $h1-font-size:                96px; //$font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-conversion-ratio * 60; //$font-size-base * 2 !default;
+$h2-font-size:                60px; //$font-size-base * 2 !default;
 $h3-font-size:                $font-size-conversion-ratio * 48; //$font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-conversion-ratio * 34; //$font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-conversion-ratio * 24; //$font-size-base * 1.25 !default;
@@ -728,10 +727,7 @@ $tooltip-arrow-height:              0px;			//.4rem !default;
 
 
 
-
-
 // -- Post import stuff --
-
 
 
 
@@ -740,7 +736,6 @@ $tooltip-arrow-height:              0px;			//.4rem !default;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
-
 
 
 
@@ -784,7 +779,7 @@ h4,.h4,.display-4 {
 	letter-spacing: $h4-letter-spacing;
 }
 
-h5,h5 {
+h5,.h5 {
 	font-weight: 		$font-weight-normal;
 	letter-spacing: $h5-letter-spacing;
 }
@@ -801,37 +796,53 @@ h6,.h6 {
 
 @include media-breakpoint-up(xs) {
 	// 1/2
-	.display-1 { font-size:	$display1-size * .5;}
-	.display-2 { font-size: $display2-size * .5;}
-	.display-3 { font-size: $display3-size * .5;}
-	.display-4 { font-size: $display4-size * .5;}
+	// .display-1 { font-size:	$display1-size * .5;}
+	// .display-2 { font-size: $display2-size * .5;}
+	// .display-3 { font-size: $display3-size * .5;}
+	// .display-4 { font-size: $display4-size * .5;}
+	.display-1 { font-size:	$display1-size * .5;}			//96 * .5 	= 48
+	.display-2 { font-size: $display2-size * .625;}		//60 * .625 	= 37.5
+	.display-3 { font-size: $display3-size * .75;}		//48 * .75 	= 36
+	.display-4 { font-size: $display4-size * .875;}		//34 * .875 = 29.75
 
 }
 
 @include media-breakpoint-up(sm) {
 	// 5/8
-	.display-1 { font-size:	$display1-size * .625;}
-	.display-2 { font-size: $display2-size * .625;}
-	.display-3 { font-size: $display3-size * .625;}
-	.display-4 { font-size: $display4-size * .625;}
+	// .display-1 { font-size:	$display1-size * .625;}
+	// .display-2 { font-size: $display2-size * .625;}
+	// .display-3 { font-size: $display3-size * .625;}
+	// .display-4 { font-size: $display4-size * .625;}
+	.display-1 { font-size:	$display1-size * .625;}		//96 * .625 = 60
+	.display-2 { font-size: $display2-size * .625;}		//60 * .625 	= 37.5
+	.display-3 { font-size: $display3-size * .75;}		//48 * .75 	= 36
+	.display-4 { font-size: $display4-size * .875;}		//34 * .875 = 29.75
 
 }
 
 @include media-breakpoint-up(md) {
 	// 3/4
-	.display-1 { font-size:	$display1-size * .75;}
-	.display-2 { font-size: $display2-size * .75;}
-	.display-3 { font-size: $display3-size * .75;}
-	.display-4 { font-size: $display4-size * .75;}
+	// .display-1 { font-size:	$display1-size * .75;}
+	// .display-2 { font-size: $display2-size * .75;}
+	// .display-3 { font-size: $display3-size * .75;}
+	// .display-4 { font-size: $display4-size * .75;}
+	.display-1 { font-size:	$display1-size * .75;}		//96 * .75 	= 72
+	.display-2 { font-size: $display2-size * .75;}		//60 * .75 	= 45
+	.display-3 { font-size: $display3-size * .75;}		//48 * .75 	= 36
+	.display-4 { font-size: $display4-size * .875;}		//34 * .875 = 29.75
 
 }
 
 @include media-breakpoint-up(lg) {
 	// 7/8
-	.display-1 { font-size:	$display1-size * .875;}
-	.display-2 { font-size: $display2-size * .875;}
-	.display-3 { font-size: $display3-size * .875;}
-	.display-4 { font-size: $display4-size * .875;}
+	// .display-1 { font-size:	$display1-size * .875;}
+	// .display-2 { font-size: $display2-size * .875;}
+	// .display-3 { font-size: $display3-size * .875;}
+	// .display-4 { font-size: $display4-size * .875;}
+	.display-1 { font-size:	$display1-size * .875;}		//96 * .875 	= 84
+	.display-2 { font-size: $display2-size * .875;}		//60 * .875 	= 52.5
+	.display-3 { font-size: $display3-size * .875;}		//48 * .875 	= 42
+	.display-4 { font-size: $display4-size * .875;}		//34 * .875 = 29.75
 }
 
 @include media-breakpoint-up(xl) {
@@ -845,9 +856,9 @@ h6,.h6 {
 
 //Shadows
 //Add shadows to components
-.jumbotron {box-shadow: $shadow-2;}
-.navbar {box-shadow: 		$shadow-4}
-.card {box-shadow: 			$shadow-2}
+.jumbotron	{box-shadow: $shadow-2;}
+.navbar 		{box-shadow: 		$shadow-4;}
+.card 			{box-shadow: 			$shadow-2;}
 
 
 //Buttons
@@ -949,8 +960,6 @@ $btn-active-opacity:	$active-opacity-dark;
 		}
 	}
 }
-
-
 
 
 
