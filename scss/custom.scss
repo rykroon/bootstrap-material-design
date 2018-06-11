@@ -793,59 +793,43 @@ h6,.h6 {
 
 //Responsive Typography
 
+//goals for responsive Typography
+// - at XS, display-4 is still bigger than H5 (24)
+// - for each breakpoint there is atleast a 4px difference between each display
+// -
 
 @include media-breakpoint-up(xs) {
-	// 1/2
-	// .display-1 { font-size:	$display1-size * .5;}
-	// .display-2 { font-size: $display2-size * .5;}
-	// .display-3 { font-size: $display3-size * .5;}
-	// .display-4 { font-size: $display4-size * .5;}
 	.display-1 { font-size:	$display1-size * .5;}			//96 * .5 	= 48
-	.display-2 { font-size: $display2-size * .625;}		//60 * .625 	= 37.5
-	.display-3 { font-size: $display3-size * .75;}		//48 * .75 	= 36
-	.display-4 { font-size: $display4-size * .875;}		//34 * .875 = 29.75
+	.display-2 { font-size: $display2-size * .625;}		//60 * .625 = 37.5
+	.display-3 { font-size: $display3-size * .625;}		//48 * .625 = 30
+	.display-4 { font-size: $display4-size * .75;}		//34 * .75 	= 25.5
 
 }
 
 @include media-breakpoint-up(sm) {
-	// 5/8
-	// .display-1 { font-size:	$display1-size * .625;}
-	// .display-2 { font-size: $display2-size * .625;}
-	// .display-3 { font-size: $display3-size * .625;}
-	// .display-4 { font-size: $display4-size * .625;}
 	.display-1 { font-size:	$display1-size * .625;}		//96 * .625 = 60
-	.display-2 { font-size: $display2-size * .625;}		//60 * .625 	= 37.5
-	.display-3 { font-size: $display3-size * .75;}		//48 * .75 	= 36
-	.display-4 { font-size: $display4-size * .875;}		//34 * .875 = 29.75
-
-}
-
-@include media-breakpoint-up(md) {
-	// 3/4
-	// .display-1 { font-size:	$display1-size * .75;}
-	// .display-2 { font-size: $display2-size * .75;}
-	// .display-3 { font-size: $display3-size * .75;}
-	// .display-4 { font-size: $display4-size * .75;}
-	.display-1 { font-size:	$display1-size * .75;}		//96 * .75 	= 72
 	.display-2 { font-size: $display2-size * .75;}		//60 * .75 	= 45
 	.display-3 { font-size: $display3-size * .75;}		//48 * .75 	= 36
 	.display-4 { font-size: $display4-size * .875;}		//34 * .875 = 29.75
 
 }
 
-@include media-breakpoint-up(lg) {
-	// 7/8
-	// .display-1 { font-size:	$display1-size * .875;}
-	// .display-2 { font-size: $display2-size * .875;}
-	// .display-3 { font-size: $display3-size * .875;}
-	// .display-4 { font-size: $display4-size * .875;}
+// @include media-breakpoint-up(md) {
+// 	.display-1 { font-size:	$display1-size * .75;}		//96 * .75 	= 72
+// 	.display-2 { font-size: $display2-size * .75;}		//60 * .75 	= 45
+// 	.display-3 { font-size: $display3-size * .75;}		//48 * .75 	= 36
+// 	.display-4 { font-size: $display4-size * .875;}		//34 * .875 = 29.75
+//
+// }
+
+@include media-breakpoint-up(md) {
 	.display-1 { font-size:	$display1-size * .875;}		//96 * .875 	= 84
 	.display-2 { font-size: $display2-size * .875;}		//60 * .875 	= 52.5
 	.display-3 { font-size: $display3-size * .875;}		//48 * .875 	= 42
 	.display-4 { font-size: $display4-size * .875;}		//34 * .875 = 29.75
 }
 
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(lg) {
 	.display-1 { font-size:	$display1-size;}
 	.display-2 { font-size: $display2-size;}
 	.display-3 { font-size: $display3-size;}
